@@ -1,51 +1,53 @@
-import React from "react";
-import { Store } from "./Store";
+import React from 'react';
+import { Store } from './Store';
 
 const App = () => {
   const { state, dispatch } = React.useContext(Store);
 
   const add = () =>
     dispatch({
-      types: "ADD"
+      types: 'ADD'
     });
 
   const sub = () =>
     dispatch({
-      types: "SUB"
+      types: 'SUB'
     });
 
   return (
     <div
       style={{
-        display: "flex",
-        flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        display: 'flex',
+        flexFlow: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
-      <h1 style={{ color: "#A4262c" }}>
+      <h1 style={{ color: '#A4262c' }}>
         This is our own-config react app with redux by hooks
       </h1>
-      <p style={{ fontSize: "30px", color: "green" }}>
+      <p style={{ fontSize: '30px', color: 'green' }}>
         This is the current value of counter: {state.counter}
       </p>
       <button
+        type="button"
         style={{
-          margin: "5px",
-          padding: "5px",
-          color: "teal",
-          fontSize: "20px"
+          margin: '5px',
+          padding: '5px',
+          color: 'teal',
+          fontSize: '20px'
         }}
         onClick={add}
       >
         Type to add to counter
       </button>
       <button
+        type="button"
         style={{
-          margin: "5px",
-          padding: "5px",
-          color: "purple",
-          fontSize: "20px"
+          margin: '5px',
+          padding: '5px',
+          color: 'purple',
+          fontSize: '20px'
         }}
         onClick={sub}
       >
